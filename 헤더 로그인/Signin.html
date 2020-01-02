@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Sign In</title>
+<link rel="stylesheet" href="css/Signin.css">
+<script  src="js/Signin.js"></script>
+ </head>
+ <body>
+ <form method="post" action="InsertSIGNDB.jsp" name="SIGNIN">
+ <div id="sign_box">
+ <th><h1>FOR TRAVELER</h1></th>
+  <table align="center">
+	  
+	  <tr>	  
+	  <th colspan="2"><h3>1.회원 정보</h3></th></tr>
+	  <tr>
+      <td><font>*</font> 이름</td>
+	  <td><input type="text" name="namea" size="25" maxlength="4"></td></tr>
+	  <tr>
+	  <td>&nbsp&nbsp성별</td>
+	  <td><div class="ac"><input type="radio" name="chk_male" value="남자" style="vertical-align: middle;"> 남자&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		    <input type="radio" name="chk_male" value="여자" style="vertical-align: middle;">여자
+      </div></td>
+	  </tr>
+	  <td><font>*</font> 생년월일</td>
+          <td><div class="ac"><select name="year" size='1'>
+		  <option value="">select</option>
+          <option value="1990">1990</option>
+          <option value="1991">1991</option>
+          <option value="1992">1992</option>
+          <option value="1993">1993</option>
+          <option value="1994">1994</option>
+          <option value="1995">1995</option>
+          <option value="1996">1996</option>
+          <option value="1997">1997</option>
+          <option value="1998">1998</option>
+          <option value="1999">1999</option>
+		  <option value="2000">2000</option></select> 년
+
+		  <select name="month" size='1'>
+          <option value="">select</option>
+		  <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option></select> 월
+
+		  <select name="day" size='1'>
+          <option value="">select</option>
+		  <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+          <option value="13">13</option>
+		  <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+		  <option value="24">24</option>
+		  <option value="25">25</option>
+		  <option value="26">26</option>
+		  <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option></select> 일</div></td> 
+		  </tr>
+	  <tr>
+      <td><font>*</font> 휴대폰번호</td>
+	  <td><select name="phone_1" size='1'>
+          <option value="">select</option>
+		  <option value="sk">SKT</option>
+          <option value="kt">KT</option>
+          <option value="lg">LGU+</option>
+          <option value="알뜰폰skt">알뜰폰SKT</option>
+		  <option value="알뜰폰kt">알뜰폰KT</option>
+		  <option value="알뜰폰lg">알뜰폰LGU+</option></select> &nbsp&nbsp&nbsp
+	  <select name="phone_2" size='1'>
+          <option value="">select</option>
+		  <option value="010">010</option>
+          <option value="011">011</option>
+          <option value="016">016</option>
+          <option value="019">019</option></select>
+	  - <input type="text" name="phone_3" size="6" maxlength="4"> - <input type="text" name="phone_4" size="6" maxlength="4"></td></tr>
+	  <tr>
+	  <td><font>*</font> E-mail</td><td>
+          <input type='text' name="email" size="8" maxlength="8"> @ 
+          <input type='text' name="email_dns" size="16" maxlength="15">&nbsp&nbsp
+          <select name="emailaddr" onChange=emailselect(SIGNIN.emailaddr) size="1" style="width:75px;">
+		  <option value="">직접입력</option>
+          <option value="daum.net">daum.net</option>
+          <option value="empal.com">empal.com</option>
+          <option value="gmail.com">gmail.com</option>
+          <option value="hanmail.net">hanmail.net</option>
+          <option value="msn.com">msn.com</option>
+          <option value="naver.com">naver.com</option>
+          <option value="nate.com">nate.com</option>
+          </select>
+      </td></tr>
+	  <tr>
+	  <td>&nbsp&nbsp주소</td>
+	  <td><input type="text" name="addr" size="8" maxlength="7">&nbsp - &nbsp<input type="text" name="addr1" size="8" maxlength="7"> <a href='#' style='cursor:help'><button type="button" onClick=joososelect()>주소검색</button><br></a></td></tr>
+	  <tr>
+	  <th></th>
+	  <td><input type="text" name="addr2" size="34" maxlength="100"></td></tr>
+	  <tr>
+	  <th colspan="2"><h3>2.로그인 정보</h3></th></tr>
+	  <tr>
+      <td><font>*</font> 아이디</td>
+      <td><input type="text" name="idd" size="25" maxlength="8"> <a href='#' style='cursor:help'><button type="button" onClick=idcheck(idd)>중복확인</button><br></a></td></tr>
+	  <tr>
+	  <td><font>*</font> 비밀번호</td>
+	  <td><div class="ad"><input type="password" name="pw_1" size="25" maxlength="10"> 8~10자리 로 입력해주세요</div></td></tr>
+	  <tr>
+	  <td><font>*</font> 비밀번호 확인</td>
+	  <td><div class="ad"><input type="password" name="pw_2" size="25" maxlength="10"> 비밀번호를 한번더 입력하세요</div></td></tr>
+	  
+		 </table>
+		 <table align="center" >	  
+	
+	 
+	   <tr height="50"></tr>
+	   <tr><td colspan="2"></tr>
+	   <tr>
+            <td colspan="2" align="center">
+			<input type="button" value="확인" onclick="irum()" style="background-color:#056072; color:white; width:80px; height:30px;">
+            <input type="reset" value="취소" style="background-color:#056072; color:white; width:80px; height:30px;">
+            </td>
+           </tr>
+		   <tr height="30"></tr>
+           </table>          
+		  </div>
+          </form>
+
+         
+ </body>
+</html>

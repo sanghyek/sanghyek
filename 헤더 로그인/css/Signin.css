@@ -1,0 +1,44 @@
+
+  body{;
+  }
+  #sign_box{   
+  background-color:#F7F7F7;
+  }
+  table{
+  background-color:#F7F7F7;
+  width:600px;
+  }
+  font{color:red;}
+  td{
+  font-size:10pt;
+  text-align:
+  }
+  h1{
+  text-align:center;
+  }
+  #size{font-size:7;}
+  input{
+  height:25px;
+  border-radius:10px;}
+  select{
+  font-size:9pt;
+  font-weight:bold;
+  border-radius:10px;
+  width:70px;
+  height:30px;
+  }
+  .bb{
+  width:150px;
+  height:20px;
+  border-radius:10px
+  }
+  button{
+  font-weight:bold;
+  font-size:8pt;
+  width:65px;
+  height:23px;
+  border-radius:10px
+  }
+  .ad{font-size:8pt;}
+  .ac{font-size:9pt; font-weight:bold;}  
+  .aa{background-color:#747474; font-weight:bold; color:white; font-size:16pt;}
