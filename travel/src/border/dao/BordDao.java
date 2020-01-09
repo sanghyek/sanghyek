@@ -13,7 +13,7 @@ public class BordDao {
 	Connection conn=null; 
 	Statement stmt=null;
 
-	BordDao(){
+	public BordDao(){
 	try{
 		Class.forName("com.mysql.jdbc.Driver");
 	}catch(Exception e){
