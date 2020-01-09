@@ -113,6 +113,7 @@
     	        }
     	 	else{
     	 		$("#ajaxReturn").html("사용하셔도 좋은 ID 입니다")
+    	 		$("#chid").val("");
     	 	}
     	
     		
@@ -154,7 +155,8 @@ function check() {
         $("#username").focus();
         return false;
       }
- 
+     
+     
       //아이디 공백 확인
       if($("#userid").val() == ""){
         alert("아이디를 입력하세요");
@@ -232,6 +234,13 @@ function check() {
         $("#userbirth").focus();
         return false;
       }
+    
+      //ID중복확인 버튼
+      if ($("#chid").val()!="") {
+         alert("ID 중복확인을 해주세요");
+         return false;
+      }
+         
     return true;
   }
 
@@ -262,7 +271,7 @@ overflow-x: hidden;">
         </div>
 		  <div class="form-group">
           <label for="username">Userid</label><div id="ajaxReturn" style="width:400px;color:black;font-size:12pt;"></div>
-          <input class="form-control" id="userid" type="text" name="userid" placeholder="ID를 5~8자리 영문대소문자와 숫자로 입력하세요" /><input type="button" value="ID중복확인" id="btnid"/>
+          <input class="form-control" id="userid" type="text" name="userid" placeholder="ID를 5~8자리 영문대소문자와 숫자로 입력하세요" /><input type="hidden" id="chid" value="on"><input type="button" value="ID중복확인" id="btnid"/>
         </div>
          <div class="form-group">
           <label for="password">Password</label>

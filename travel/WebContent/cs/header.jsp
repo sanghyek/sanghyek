@@ -52,7 +52,7 @@
 				<li id="nop"><a href="#">명소</a></li>
 				<li id="nop"><a href="#">맛집</a></li>
 			</ul>
-		<li><a href="#">커뮤니티</a>
+		<li><a href="?pageChange=board.jsp">커뮤니티</a>
 			<ul class="dept01">
 				<li id="nop"><a href="#">함께해요</a></li>
 				<li id="nop"><a href="#">여행후기</a></li>
