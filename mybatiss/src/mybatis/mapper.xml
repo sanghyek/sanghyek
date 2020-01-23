@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="abc">
+
+<select id="all_user" resultType="Dto"> <!-- 형태를 남긴다  List를써서 여러줄 받을수있음-->
+select * from user;
+</select>
+<insert id="insert_user" parameterType="list"> 
+insert into user values(#{id},#{name},#{pw});
+</insert>
+<update id="update_user" parameterType="list"> 
+update user set pw=#{pw} where id=#{id};
+</update>
+<delete id="delete_user" parameterType="list"> 
+delete from user where id=#{id};
+</delete>
+
+</mapper>
