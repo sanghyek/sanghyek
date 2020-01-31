@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="abc">
+
+<select id="infoANDtip" resultType="Dto"> <!-- 형태를 남긴다  List를써서 여러줄 받을수있음-->
+select * from infotip order by num desc;
+</select>
+<select id="infoANDtipView" resultType="Dto" parameterType="list"> <!-- 형태를 남긴다  List를써서 여러줄 받을수있음-->
+select * from infotip where num=${num};
+</select>
+<insert id="insertDB" parameterType="list"> 
+insert into infotip values(#{num},#{category},#{title},#{writer},now(),0,#{contents});
+</insert>
+<update id="updateDB" parameterType="list"> 
+update infotip set title=#{title},contents=#{contents} where num=#{num};
+</update>
+<update id="hitsupdate" parameterType="list">
+update infotip set hits=#{hits} where num=#{num};
+</update>
+<delete id="deleteDB" parameterType="list"> 
+delete from infotip where num=#{num};
+</delete>
+<update id="listorder" parameterType="list">
+update infotip set num=num-1 where num>${num};
+</update>
+
+</mapper>
