@@ -1,0 +1,91 @@
+#in{
+	position:absolute;
+	right:25%;
+	margin-top:50px;
+	width:800px;
+	text-align:center;
+}
+#in h1{
+	text-align:center;
+}
+#userinfo {
+  width: 50%;
+  margin: 25px auto;
+}
+.info {
+  margin-top:250px;
+  margin-left:200px;
+  float: left;
+  width: 70%;
+  padding: 30px 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.user{
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 45px;
+  line-height: 45px;  
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: black;
+}
+
+.modi {
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 100px;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 40px;
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+  cursor:pointer;
+}
+
+.user:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+
+label{
+	width:150px;
+	text-align:left;
+	float:left;
+	margin-left:60px;
+	color:gray;
+	font-size:11pt;
+}
+#btnmail{
+  position:absolute;
+  top:1369px;
+  right:630px;
+  width: 80px;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 25px;
+  color: white;
+  font-size: 8pt;
+  cursor:pointer;
+}
+#btnadd{
+  position:absolute;
+  top:1600px;
+  right:630px;
+  width: 80px;
+  border: 0;
+  background-color: #53CACE;
+  border-radius: 5px;
+  height: 25px;
+  color: white;
+  font-size: 8pt;	
+  cursor:pointer;
+}
